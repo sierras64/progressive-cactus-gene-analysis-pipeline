@@ -6,39 +6,6 @@ detection of start/stop loss and frameshift indels across species. Built and
 validated on 21 Brassicaceae species plus 2 outgroups; developed for de novo gene
 detection but applicable broadly across comparative genomics.
 
-## Background
-
-Progressive Cactus has accelerated the field of comparative genomics and enabled
-the study of genes and genomes across a vast range of organisms. Its ability to
-conduct whole genome alignments without requiring a specified reference genome
-overcame one of the most crucial biases with other gene and genome alignment
-programs. Its impact and far-reaching applications were demonstrated in the
-Zoonomia Project, where hundreds of mammalian genomes were aligned and analyzed,
-leading to novel discoveries in human genetics. Progressive Cactus has also been
-utilized in studying plant species, which are notoriously difficult to
-investigate using other alignment tools due to their fast divergence and lack of
-synteny across species, and has demonstrated its statistical power in handling
-the unique genomic attributes found across plants, as shown in studies on
-potatoes. Its applications continue to expand, including in studies of selective
-constraint in birds, placental mammals, teleost fish genomic architecture, and a
-comprehensive telomere-to-telomere alignment of ape genomes:
-
-- Feng, S., Stiller, J., Deng, Y. et al. Dense sampling of bird diversity increases power of comparative genomics. *Nature* 587, 252–257 (2020). https://doi.org/10.1038/s41586-020-2873-9
-- Christmas, M.J. et al. Evolutionary constraint and innovation across hundreds of placental mammals. *Science* 380, eabn3943 (2023). https://doi.org/10.1126/science.abn3943
-- Song, Y. et al. A genomic compendium of hundreds of teleost fishes reveals their evolutionary landscape. *The Innovation* 7(3), 101177 (2025). https://doi.org/10.1016/j.xinn.2025.101177
-- Yoo, D., Rhie, A., Hebbar, P. et al. Complete sequencing of ape genomes. *Nature* 641, 401–418 (2025). https://doi.org/10.1038/s41586-025-08816-3
-
-One of the most underutilized elements of Progressive Cactus is its
-reconstruction of ancestral sequences during multiple genome alignment — limited
-to alignable regions, but offering a unique avenue for directly comparing the
-ancestral state of a sequence with its modern configuration. The tool's own
-weaknesses are also well known: alignment accuracy depends heavily on the
-accuracy of the input tree, and precision is biased across the genome, aligning
-annotated coding regions more accurately than intergenic regions — largely
-because most testing and tooling to date has focused on coding regions, leaving
-the tool's true ability to align intergenic sequence largely untested and
-unimproved.
-
 Progressive Cactus's primary output is a Hierarchical Alignment (HAL) file — a
 graphical representation of the multi-genome alignment. Existing tools (the UCSC
 Genome Browser, HalTools) let you visualize a HAL file, but beyond phylogenomic
@@ -46,7 +13,7 @@ or pangenome studies, there has not been an efficient way to use it to answer
 questions about genes, synteny, and downstream biology. This pipeline works in
 conjunction with a Cactus HAL output (and the existing HAL/MAF toolkits) to
 convert and analyze alignment results in a way that generalizes to any research
-question, not just phylogenomics or pangenomes.
+question.
 
 ## What the pipeline does
 
